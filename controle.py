@@ -1,4 +1,16 @@
 from PyQt5 import uic,QtWidgets
+import mysql.connector
+
+banco = mysql.connector.connect(
+    host="localhost",
+    port="3307",
+    user="root",
+    passwd="123456",
+    database="cadastro_python"
+)
+print(banco)
+
+
 
 def funcao_principal():
 
@@ -19,6 +31,8 @@ def funcao_principal():
     print("Codigo", campo1)
     print("Descricao", campo2)
     print("Preco", campo3)
+
+    
 
 
 
